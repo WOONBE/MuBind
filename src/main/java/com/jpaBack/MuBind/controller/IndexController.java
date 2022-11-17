@@ -1,9 +1,9 @@
-package com.jpaBack.MuBind.web;
+package com.jpaBack.MuBind.controller;
 
 import com.jpaBack.MuBind.config.auth.LoginUser;
 import com.jpaBack.MuBind.config.auth.dto.SessionUser;
 import com.jpaBack.MuBind.service.PostsService;
-import com.jpaBack.MuBind.web.dto.PostsResponseDto;
+import com.jpaBack.MuBind.web.dto.post.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

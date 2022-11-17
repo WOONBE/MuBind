@@ -1,4 +1,4 @@
-package com.jpaBack.MuBind.web.dto;
+package com.jpaBack.MuBind.web.dto.post;
 
 import lombok.Builder;
 import lombok.Getter;

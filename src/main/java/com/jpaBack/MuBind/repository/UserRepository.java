@@ -1,7 +1,8 @@
-package com.jpaBack.MuBind.domain.user;
+package com.jpaBack.MuBind.repository;
 
 
 
+import com.jpaBack.MuBind.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

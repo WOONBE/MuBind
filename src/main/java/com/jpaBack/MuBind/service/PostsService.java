@@ -1,11 +1,11 @@
 package com.jpaBack.MuBind.service;
 
 import com.jpaBack.MuBind.domain.posts.Posts;
-import com.jpaBack.MuBind.domain.posts.PostsRepository;
-import com.jpaBack.MuBind.web.dto.PostsListResponseDto;
-import com.jpaBack.MuBind.web.dto.PostsResponseDto;
-import com.jpaBack.MuBind.web.dto.PostsSaveRequestDto;
-import com.jpaBack.MuBind.web.dto.PostsUpdateRequestDto;
+import com.jpaBack.MuBind.repository.PostsRepository;
+import com.jpaBack.MuBind.web.dto.post.PostsListResponseDto;
+import com.jpaBack.MuBind.web.dto.post.PostsResponseDto;
+import com.jpaBack.MuBind.web.dto.post.PostsSaveRequestDto;
+import com.jpaBack.MuBind.web.dto.post.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,7 +29,6 @@ public class PostsService {
                 .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
 
         posts.update(requestDto.getTitle(), requestDto.getContent());
-
         return id;
     }
 

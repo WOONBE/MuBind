@@ -1,5 +1,6 @@
 package com.jpaBack.MuBind.domain.posts;
 
+import com.jpaBack.MuBind.repository.PostsRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

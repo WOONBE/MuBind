@@ -1,4 +1,4 @@
-package com.jpaBack.MuBind.web.dto;
+package com.jpaBack.MuBind.web.dto.post;
 
 import com.jpaBack.MuBind.domain.posts.Posts;
 import lombok.Builder;

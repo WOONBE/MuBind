@@ -4,7 +4,7 @@ package com.jpaBack.MuBind.config.auth;
 import com.jpaBack.MuBind.config.auth.dto.OAuthAttributes;
 import com.jpaBack.MuBind.config.auth.dto.SessionUser;
 import com.jpaBack.MuBind.domain.user.User;
-import com.jpaBack.MuBind.domain.user.UserRepository;
+import com.jpaBack.MuBind.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -47,7 +47,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
     private User saveOrUpdate(OAuthAttributes attributes) {
         User user = userRepository.findByEmail(attributes.getEmail())
-                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
+                .map(entity -> entity.update(attributes.getName(), attributes.getPicture(), attributes.getGenre()))
                 .orElse(attributes.toEntity());
 
         return userRepository.save(user);

@@ -1,10 +1,10 @@
-package com.jpaBack.MuBind.web;
+package com.jpaBack.MuBind.controller;
 
 import com.jpaBack.MuBind.service.PostsService;
-import com.jpaBack.MuBind.web.dto.PostsListResponseDto;
-import com.jpaBack.MuBind.web.dto.PostsResponseDto;
-import com.jpaBack.MuBind.web.dto.PostsSaveRequestDto;
-import com.jpaBack.MuBind.web.dto.PostsUpdateRequestDto;
+import com.jpaBack.MuBind.web.dto.post.PostsListResponseDto;
+import com.jpaBack.MuBind.web.dto.post.PostsResponseDto;
+import com.jpaBack.MuBind.web.dto.post.PostsSaveRequestDto;
+import com.jpaBack.MuBind.web.dto.post.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

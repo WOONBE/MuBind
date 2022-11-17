@@ -1,5 +1,6 @@
-package com.jpaBack.MuBind.domain.posts;
+package com.jpaBack.MuBind.repository;
 
+import com.jpaBack.MuBind.domain.posts.Posts;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
