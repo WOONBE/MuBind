@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.BeanUtils;
 
+//유저 프로필 조회 dto
 @Getter
 @Setter
 @NoArgsConstructor

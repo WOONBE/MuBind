@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;
 
-
+//게시판 글 조회 dto
 @Getter
 public class PostsListResponseDto {
     private Long id;

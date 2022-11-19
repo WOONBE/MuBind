@@ -3,6 +3,7 @@ package com.jpaBack.MuBind.domain.user;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+//유저 권한 설정
 @Getter
 @RequiredArgsConstructor
 public enum Role {

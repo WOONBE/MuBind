@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+
+// 매칭 리포지토리
 @Repository
 @RequiredArgsConstructor
 public class MatchingRepository {
@@ -21,6 +23,7 @@ public class MatchingRepository {
     }
 
 
+    //모든 유저 조회
     public List<User> findAll(){
         return em.createQuery("select u from User u",User.class)
                 .getResultList();
@@ -28,6 +31,7 @@ public class MatchingRepository {
 
 
 
+    //장르로 유저 조회
     public List<User> findByGenre(String genre){
         return em.createQuery("select u from User u where u.genre = :genre", User.class)
                 .setParameter("genre", genre)

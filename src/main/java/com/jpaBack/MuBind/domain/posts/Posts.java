@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+// 게시판 엔티티
 @Getter
 @NoArgsConstructor
 @Entity

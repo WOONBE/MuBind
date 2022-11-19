@@ -7,6 +7,7 @@ import com.jpaBack.MuBind.web.dto.user.UserResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+//유저 프로필 컨트롤러
 @RequiredArgsConstructor
 @RestController
 public class UserController {

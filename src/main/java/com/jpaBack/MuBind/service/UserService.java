@@ -10,12 +10,14 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+// 유저 프로필 리포지토리
 @RequiredArgsConstructor
 @Service
 public class UserService {
 
     private final UserRepository userRepository;
 
+    //id로 조회하기
     @Transactional(readOnly = true)
     public UserResponseDto findById(Long id) {
         User entity = userRepository.findById(id)
@@ -24,6 +26,7 @@ public class UserService {
         return new UserResponseDto(entity);
     }
 
+    //유저 프로필 수정
     @Transactional
     public Long update(Long id, UserResponseDto responseDto) {
         User user = userRepository.findById(id)

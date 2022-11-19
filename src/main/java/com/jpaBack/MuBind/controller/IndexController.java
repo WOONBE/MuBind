@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpSession;
 
+    // 게시판 컨트롤러
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
@@ -19,6 +20,7 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
+    //게시판 메인 주소 리턴
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
@@ -29,12 +31,14 @@ public class IndexController {
     }
 
 
+    //글 저장시 주소 리턴
 
     @GetMapping("/posts/save")
     public String postsSave() {
         return "posts-save";
     }
 
+    //글 수정시 주소 리턴
     @GetMapping("/posts/update/{id}")
     public String postsUpdate(@PathVariable Long id, Model model) {
         PostsResponseDto dto = postsService.findById(id);

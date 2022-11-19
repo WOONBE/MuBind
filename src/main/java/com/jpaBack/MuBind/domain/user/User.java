@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+// 유저 엔티티
 @Getter
 @NoArgsConstructor
 @Entity
@@ -39,6 +40,7 @@ public class User extends BaseTimeEntity {
     @Column(nullable = false)
     private Role role;
 
+    //유저 정보 엔티티
     @Builder
     public User(String name, String email, String picture, Role role, String genre) {
         this.name = name;
@@ -48,6 +50,7 @@ public class User extends BaseTimeEntity {
         this.genre = genre;
     }
 
+    //유저 정보 수정
     public User update(String name, String picture, String genre) {
         this.name = name;
         this.picture = picture;
@@ -56,6 +59,7 @@ public class User extends BaseTimeEntity {
         return this;
     }
 
+    // 유저 권한 받아오기
     public String getRoleKey() {
         return this.role.getKey();
     }

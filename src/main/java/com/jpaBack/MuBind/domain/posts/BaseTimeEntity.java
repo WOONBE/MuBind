@@ -10,6 +10,7 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
+//현재 시간 조회용
     @Getter
     @MappedSuperclass
     @EntityListeners(AuditingEntityListener.class)
