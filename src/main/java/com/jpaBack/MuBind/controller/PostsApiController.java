@@ -20,6 +20,7 @@ public class PostsApiController {
     //게시판 글 저장
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
+
         return postsService.save(requestDto);
     }
 
@@ -39,12 +40,14 @@ public class PostsApiController {
     //게시판에서 id로 찾기
     @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById(@PathVariable Long id) {
+
         return postsService.findById(id);
     }
 
     //게시판 전체 글 조회
     @GetMapping("/api/v1/posts/list")
     public List<PostsListResponseDto> findAll() {
+
         return postsService.findAllDesc();
     }
 }

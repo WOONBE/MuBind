@@ -16,6 +16,7 @@ public class UserController {
     //유저 프로필 조회
     @GetMapping("/user/{id}")
     public UserResponseDto findById(@PathVariable Long id) {
+
         return userService.findById(id);
     }
 
